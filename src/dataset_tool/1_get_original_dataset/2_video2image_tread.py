@@ -1,3 +1,5 @@
+#该文件用于跑核心处理，算力不足容易卡顿
+
 import cv2
 import os
 from concurrent.futures import ThreadPoolExecutor, as_completed
