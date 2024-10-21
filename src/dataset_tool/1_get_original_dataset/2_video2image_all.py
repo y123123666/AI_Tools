@@ -6,8 +6,9 @@ def extract_frames(video_path, output_folder):
     os.makedirs(output_folder, exist_ok=True)
     cap = cv2.VideoCapture(video_path)
 
+    fps = cap.get(cv2.CAP_PROP_FPS)  # 获取视频的帧率
     total_frames = int(cap.get(cv2.CAP_PROP_FRAME_COUNT))
-    print(f"总帧数: {total_frames}")
+    print(f"总帧数: {total_frames}, 帧率: {fps} FPS")
 
     for frame_count in range(total_frames):
         ret, frame = cap.read()
