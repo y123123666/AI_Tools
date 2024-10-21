@@ -75,7 +75,7 @@ def split_dataset(
 
     # 复制文件到相应的目录，处理中文路径
     for txt_file in train_files:
-        img_file = txt_file.replace(".txt", ".png")
+        img_file = txt_file.replace(".txt", ".jpg")#如需处理png图片，则修改为png
         shutil.copy(
             os.path.abspath(os.path.join(image_dir, img_file)),
             os.path.abspath(os.path.join(img_train_path, img_file)),
@@ -86,7 +86,7 @@ def split_dataset(
         )
 
     for txt_file in val_files:
-        img_file = txt_file.replace(".txt", ".png")
+        img_file = txt_file.replace(".txt", ".jpg")
         shutil.copy(
             os.path.abspath(os.path.join(image_dir, img_file)),
             os.path.abspath(os.path.join(img_val_path, img_file)),
@@ -97,7 +97,7 @@ def split_dataset(
         )
 
     for txt_file in test_files:
-        img_file = txt_file.replace(".txt", ".png")
+        img_file = txt_file.replace(".txt", ".jpg")
         shutil.copy(
             os.path.abspath(os.path.join(image_dir, img_file)),
             os.path.abspath(os.path.join(img_test_path, img_file)),
