@@ -29,9 +29,9 @@ def monte_carlo_image_sampling(image_folder, sample_ratio, output_folder):
     print(f"抽样完成，已复制 {sample_size} 张图像到 {output_folder}")
 
 
-# 示例用法
-image_folder = "dataset/new"
-output_folder = "3_monte_carlo_sampling"
-sample_ratio = 0.1  # 10%
+# 示例用法 y
+image_folder = "processed_imgs/4_enhanced_images/v1_dataset"
+output_folder = "processed_imgs/4_enhanced_images/v1_dataset_sample"
+sample_ratio = 0.5  # 10%
 
 monte_carlo_image_sampling(image_folder, sample_ratio, output_folder)
